@@ -1,9 +1,12 @@
-import { FC } from "react";
+import axios from "axios";
+import React from "react";
 
-interface pageProps {}
+async function page() {
+  const { data } = await axios.get(
+    "https://jsonplaceholder.typicode.com/posts/1"
+  );
 
-const page: FC<pageProps> = ({}) => {
-  return <div>login from auth</div>;
-};
+  return <div>page login : {JSON.stringify(data)}</div>;
+}
 
 export default page;
