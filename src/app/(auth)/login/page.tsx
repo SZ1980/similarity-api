@@ -9,6 +9,8 @@ async function page() {
     "https://jsonplaceholder.typicode.com/posts/1"
   );
 
+  throw new Error("not auth!");
+
   return <div>page login : {JSON.stringify(data)}</div>;
 }
 
